@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-agent-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-agent-demo
+  template:
+    metadata:
+      labels:
+        app: devops-agent-demo
+    spec:
+      containers:
+        - name: fastapi-container
+          image: devops-agent-demo:latest
+          ports:
+            - containerPort: 8080
