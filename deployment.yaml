@@ -16,4 +16,4 @@ spec:
         - name: fastapi-container
           image: devops-agent-demo:latest
           ports:
-            - containerPort: 8000
+            - containerPort: 8080
